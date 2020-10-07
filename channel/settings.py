@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -135,19 +136,5 @@ MEDIA_URL='/media/'
 
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 
-
-
-# redis_host = os.environ.get('REDIS_HOST', 'localhost')
-
-# # Channel layer definitions
-# # http://channels.readthedocs.org/en/latest/deploying.html#setting-up-a-channel-backend
-# CHANNEL_LAYERS = {
-#     "default": {
-#         # This example app uses the Redis channel layer implementation asgi_redis
-#         "BACKEND": "asgi_redis.RedisChannelLayer",
-#         "CONFIG": {
-#             "hosts": [(redis_host, 6379)],
-#         },
-#        "ROUTING": "multichat.routing.channel_routing", # We will create it in a moment
-#     },
-# }
+# Activate Django-Heroku.
+django_heroku.settings(locals())
