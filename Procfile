@@ -1,1 +1,1 @@
-web: gunicorn channel.wsgi --log-file -
+web: gunicorn channel.wsgi
