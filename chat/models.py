@@ -18,6 +18,7 @@ class Rooms(models.Model):
     
     # Room title
     title = models.CharField(max_length=255)
+    admin = models.CharField(max_length=255,default="Shreyash")
     group_members = models.ManyToManyField(User) 
 
     # If only "staff" users are allowed (is_staff on django's User)

@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'avatar',
     'channels',
     'chat',
+    'daphne'
 ]
 
 MIDDLEWARE = [
