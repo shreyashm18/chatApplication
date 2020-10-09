@@ -82,7 +82,34 @@ CHANNEL_LAYERS={
         "BACKEND":"channels.layers.InMemoryChannelLayer"
     }
 }
-WSGI_APPLICATION = 'channel.wsgi.application'
+
+# CHANNEL_LAYERS = {
+#     "default": {
+#         "BACKEND": "channels_redis.core.RedisChannelLayer",
+#         "CONFIG": {
+#             "hosts": [("redis-server-name", 6379)],
+#         },
+#     },
+# }
+
+# CHANNEL_LAYERS = {
+#     'default': {
+#         'BACKEND': 'asgi_redis.RedisChannelLayer',
+#         'ROUTING': 'django_channels.routing.channel_routing',
+#         'CONFIG': {
+#             'hosts': [('redis', 6379), ],
+#         },
+#     },
+# }
+# CHANNEL_LAYERS = {
+#     "default": {
+#         "BACKEND": "channels_redis.core.RedisChannelLayer",
+#         "CONFIG": {
+#             "hosts": [("127.0.0.1", 6379)],
+#         },
+#     },
+# }
+# WSGI_APPLICATION = 'channel.wsgi.application'
 
 
 # Database

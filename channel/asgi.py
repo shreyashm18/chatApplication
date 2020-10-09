@@ -14,5 +14,16 @@ from channel.routing import get_default_application
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'channel.settings')
 
-application = get_asgi_application()
+# application = get_asgi_application()
 application = get_default_application()
+
+
+# import os
+# import django
+# from channels.routing import get_default_application
+
+# os.environ.setdefault("DJANGO_SETTINGS_MODULE", "myproject.settings")
+# django.setup()
+# application = get_default_application()
+
+# daphne -p 8001 channel.asgi:application
